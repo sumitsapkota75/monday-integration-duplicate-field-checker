@@ -4,7 +4,7 @@ const getColumnValues = async (boardId, column) => {
   try {
     const mondayClient = initMondayClient();
     mondayClient.setToken(
-      'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjMxNDM2MDA0NCwiYWFpIjoxMSwidWlkIjo1NDk5NDY4NSwiaWFkIjoiMjAyNC0wMS0yNVQyMTo0NToxMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjA5NjUxODYsInJnbiI6InVzZTEifQ.DO5Gfk5r8gCpMQfGfzpnF4BMAX6feGvY6tXT6laZ4Ko'
+      process.env.API_ACCESS_TOKEN
     );
     const query = `query ($boardId: ID!, $column: String!) {
           me {
@@ -46,7 +46,7 @@ const getOrCreateDuplicateGroup = async (boardID) => {
   try {
     const mondayClient = initMondayClient();
     mondayClient.setToken(
-      'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjMxNDM2MDA0NCwiYWFpIjoxMSwidWlkIjo1NDk5NDY4NSwiaWFkIjoiMjAyNC0wMS0yNVQyMTo0NToxMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjA5NjUxODYsInJnbiI6InVzZTEifQ.DO5Gfk5r8gCpMQfGfzpnF4BMAX6feGvY6tXT6laZ4Ko'
+      process.env.API_ACCESS_TOKEN
     );
     // get existing groups list in a board
     const getGroupQuery = `query ($boardID: ID!) {
@@ -98,7 +98,7 @@ const moveToNewGroup = async (duplicateItemsID, duplicateGroupID,boardID) => {
   try {
     const mondayClient = initMondayClient();
     mondayClient.setToken(
-      'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjMxNDM2MDA0NCwiYWFpIjoxMSwidWlkIjo1NDk5NDY4NSwiaWFkIjoiMjAyNC0wMS0yNVQyMTo0NToxMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjA5NjUxODYsInJnbiI6InVzZTEifQ.DO5Gfk5r8gCpMQfGfzpnF4BMAX6feGvY6tXT6laZ4Ko'
+      process.env.API_ACCESS_TOKEN
     );
     duplicateItemsID.map(async (item) => {
       let itemID = parseInt(item);
