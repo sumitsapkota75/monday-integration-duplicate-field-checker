@@ -19,12 +19,12 @@ router.post('/hitserver', function (req, res) {
 router.post('/check-duplicate', async function (req, res) {
   const { payload } = req.body;
   const { inputFields } = payload;
-  const { boardId, groupId } = inputFields;
+  const { boardId } = inputFields;
 
   const newColumnValue = req.body.payload.inputFields.columnValue;
   const column = Object.keys(newColumnValue)[0];
   // fetch all the column value for specific columns (like phone)
-  const allData = await mondayService.getColumnValues(boardId,groupId, column);
+  const allData = await mondayService.getColumnValues(boardId, column);
 
   // check for duplicate field value in the mentioned column -> phone
   const duplicateItemsID = checkDuplicateService.CheckDuplicateFieldValue(allData);
