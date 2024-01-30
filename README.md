@@ -1,18 +1,7 @@
 ## Overview
 
-This is the "Quickstart Integration" example Monday app.
-<br>It can be used as a board recipe, which transforms data from one text column to another
-
-<br>This app demonstrates how to use the:
-
-- integration recipe
-- custom action
-- call authentication with JWT
-- query monday API using short lived token (seamless authentication)
-- remote options for custom fields
-
-<br>You can find more info in our QuickStart guide [here](https://monday.com/developers/apps/quickstart-integration/)
-<br>![Screenshot](https://dapulse-res.cloudinary.com/image/upload/v1658942490/remote_mondaycom_static/developers/screenshots/QUICKSTART_GIPHY.gif)
+This is the "Duplicate Value checker Integration" example Monday app.
+<br>It can be used as a board recipe, which checks duplicate value in a specified column of a board and if duplicate is found it will move the item to a new board called Duplicates and change the status to Duplicate.
 
 ## Install
 
@@ -22,6 +11,12 @@ This is the "Quickstart Integration" example Monday app.
 
 ```
 $ npm install
+```
+
+3. Run the server using the monday tunnel:
+
+```
+$ npm start
 ```
 
 ## Configure your Monday App

@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(routes);
 app.listen(port, () => {
-  console.log(`Transform text integration listening on port ${port}`)
+  console.log(`Duplicate Field Checker integration listening on port ${port}`)
 });
 
 module.exports = app;
