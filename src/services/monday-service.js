@@ -123,7 +123,6 @@ const moveToNewGroup = async (duplicateItemsID, duplicateGroupID,boardID) => {
       }`;
       const changeStatusVariable = { itemID, boardID };
       const changeStatusResponse = await mondayClient.api(changeStatusQuery, {variables: changeStatusVariable});
-      console.log("changeStatusResponse", changeStatusResponse)
       return changeStatusResponse;
     });
   } catch (error) {

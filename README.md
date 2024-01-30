@@ -19,6 +19,8 @@ $ npm install
 $ npm start
 ```
 
+AND do not forget to load API access key using mapps:init . Key is provided in .env file as API_ACCESS_TOKEN
+
 ## Configure your Monday App
 
 ### Part One: Create a new app and integration feature

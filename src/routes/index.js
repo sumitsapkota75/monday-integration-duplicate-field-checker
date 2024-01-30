@@ -33,9 +33,8 @@ router.post('/check-duplicate', async function (req, res) {
     const duplicateGroupID = await mondayService.getOrCreateDuplicateGroup(boardId);
 
     // if exists, move item to the new board and change status to Duplicate
-    const move_item_to_group = await mondayService.moveToNewGroup(duplicateItemsID, duplicateGroupID, boardId);
+    await mondayService.moveToNewGroup(duplicateItemsID, duplicateGroupID, boardId);
   }
-
   res.sendStatus(200);
 });
 
